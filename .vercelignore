@@ -1,15 +1,27 @@
 # Backend files (not needed for frontend deployment)
 backend/
+
+# Documentation files
 *.md
+DEPLOYMENT*
+QUICK_START*
+USER_GUIDE*
+PROJECT_OVERVIEW*
+LOCAL_DEVELOPMENT_GUIDE*
+HOW_TO_UPLOAD_AND_DEPLOY*
+FINAL_PROJECT_STATUS*
+COMPLETE_SETUP_GUIDE*
+START-HERE.txt
+README-setup-google-oauth.txt
+
+# Git files
 .git/
 .gitignore
 
-# Node modules and build artifacts
-node_modules/
-frontend/node_modules/
-frontend/dist/
+# Old frontend directory (now moved to root)
+frontend/
 
-# Environment files
+# Environment files (keep .env.example)
 .env
 .env.local
 .env.production

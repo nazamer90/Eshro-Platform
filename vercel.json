@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "name": "eshro-platform",
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/dist",
-  "installCommand": "cd frontend && npm install --force",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./frontend/",
+  "name": "eshro-platform-frontend",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install --force",
+  "framework": null,
   "rewrites": [
     {
       "source": "/(.*)",
