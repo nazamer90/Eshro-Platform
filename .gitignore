@@ -90,10 +90,10 @@ backend/uploads/*
 backend/logs/
 backend/.env*
 
-# Frontend specific (now in root)
-# frontend/.env* - moved to root
-# frontend/dist/ - moved to root as dist/
-# frontend/build/ - moved to root as build/
+# Frontend specific
+frontend/.env*
+frontend/dist/
+frontend/build/
 
 # Database
 *.sql.backup

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import OriginalHomePage from './components/OriginalHomePage';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
@@ -20,22 +21,91 @@ function App() {
     <AuthProvider>
       <CartProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50 flex flex-col" dir="rtl">
-            <Header />
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/stores" element={<StoresPage />} />
-                <Route path="/products" element={<ProductsPage />} />
-                <Route path="/product/:id" element={<ProductDetailPage />} />
-                <Route path="/cart" element={<CartPage />} />
-                <Route path="/checkout" element={<CheckoutPage />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/register" element={<RegisterPage />} />
-                <Route path="/profile" element={<ProfilePage />} />
-              </Routes>
-            </main>
-            <Footer />
+          <div className="min-h-screen" dir="rtl">
+            <Routes>
+              <Route path="/" element={<OriginalHomePage />} />
+              <Route path="/modern" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <HomePage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+              <Route path="/stores" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <StoresPage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+              <Route path="/products" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <ProductsPage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+              <Route path="/product/:id" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <ProductDetailPage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+              <Route path="/cart" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <CartPage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+              <Route path="/checkout" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <CheckoutPage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+              <Route path="/login" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <LoginPage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+              <Route path="/register" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <RegisterPage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+              <Route path="/profile" element={
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  <main className="flex-1">
+                    <ProfilePage />
+                  </main>
+                  <Footer />
+                </div>
+              } />
+            </Routes>
             <Toaster 
               position="top-center"
               toastOptions={{

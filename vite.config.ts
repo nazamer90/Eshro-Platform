@@ -13,17 +13,18 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: 5173,
+    port: 12000,
+    allowedHosts: ['work-1-echeksdmbrbhrekl.prod-runtime.all-hands.dev'],
     middlewareMode: false,
     hmr: {
       protocol: "ws",
       host: "localhost",
       port: 5173,
     },
-    // Proxy for API requests to backend
+    // Proxy لتوجيه طلبات API إلى سيرفر SecureHash
     proxy: {
-      '/api': {
-        target: 'http://localhost:3001',
+      '/api/moamalat': {
+        target: 'http://localhost:4000',
         changeOrigin: true,
         secure: false,
       },
@@ -31,11 +32,5 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 2048,
-    outDir: 'dist',
-    sourcemap: false,
-  },
-  preview: {
-    host: '0.0.0.0',
-    port: 4173,
   },
 });
